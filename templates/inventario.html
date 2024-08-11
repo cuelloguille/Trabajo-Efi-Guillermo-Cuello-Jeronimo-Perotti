@@ -1,0 +1,72 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+    Inventario
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col text-center">
+            <a href="/crear_celular" class="btn btn-info">Agregar Celular</a>
+        </div>
+    </div>
+   
+    {% if celulares %}
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre del Equipo</th>
+                    <th>Modelo del Equipo</th>
+                    <th>Categoría del Equipo</th>
+                    <th>Costo del Equipo</th>
+                    <th>Marca del Celular</th>
+                    <th>Categoría del Celular</th>
+                    <th>Modelo del Celular</th>
+                    <th>Nombre del Modelo</th>
+                    <th>Fabricante del Modelo</th>
+                    <th>País de Origen del Fabricante</th>
+                    <th>Tipo de Característica</th>
+                    <th>Descripción de la Característica</th>
+                    <th>Cantidad Disponible</th>
+                    <th>Ubicación en el Almacén</th>
+                    <th>Nombre del Proveedor</th>
+                    <th>Contacto del Proveedor</th>
+                    <th>Tipo de Accesorio</th>
+                    <th>Compatible con Modelos</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for celular in celulares %}
+                <tr>
+                    <td>{{ celular.equipo_nombre }}</td>
+                    <td>{{ celular.equipo_modelo }}</td>
+                    <td>{{ celular.equipo_categoria }}</td>
+                    <td>{{ celular.equipo_costo }}</td>
+                    <td>{{ celular.marca_celular }}</td>
+                    <td>{{ celular.categoria_celular }}</td>
+                    <td>{{ celular.modelo_celular }}</td>
+                    <td>{{ celular.nombre_modelo_celular }}</td>
+                    <td>{{ celular.fabricante_nombre }}</td>
+                    <td>{{ celular.fabricante_pais }}</td>
+                    <td>{{ celular.tipo_caracteristica }}</td>
+                    <td>{{ celular.descripcion_caracteristica }}</td>
+                    <td>{{ celular.cantidad_stock }}</td>
+                    <td>{{ celular.ubicacion_almacen }}</td>
+                    <td>{{ celular.nombre_proveedor }}</td>
+                    <td>{{ celular.contacto_proveedor }}</td>
+                    <td>{{ celular.tipo_accesorio }}</td>
+                    <td>{{ celular.compatible_con_modelos }}</td>
+                    <td>{{ celular.precio }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p class="text-center">No hay celulares en el inventario.</p>
+    {% endif %}
+</div>
+{% endblock %}

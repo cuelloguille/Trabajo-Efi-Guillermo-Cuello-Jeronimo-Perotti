@@ -1,0 +1,38 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+    Información
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Información del Sistema</h1>
+    <p class="lead text-center">
+        Bienvenido a nuestro sistema de gestión de inventario de celulares. Aquí puedes agregar, visualizar y gestionar los datos de los celulares y sus accesorios.
+    </p>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h3>Funcionalidades</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Agregar Celulares: Permite añadir nuevos celulares al inventario.</li>
+                <li class="list-group-item">Ver Inventario: Visualiza todos los celulares disponibles en el inventario.</li>
+                <li class="list-group-item">Información: Proporciona una descripción de las funcionalidades del sistema.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h3>Modelos y Datos</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Equipo: Nombre, categoría, modelo, costo y precio de venta.</li>
+                <li class="list-group-item">Marca: Categoría del celular.</li>
+                <li class="list-group-item">Modelo: Nombre del modelo y fabricante.</li>
+                <li class="list-group-item">Fabricante: Nombre y país de origen del fabricante.</li>
+                <li class="list-group-item">Características: Tipo y descripción de las características del celular.</li>
+                <li class="list-group-item">Stock: Cantidad disponible y ubicación en el almacén.</li>
+                <li class="list-group-item">Proveedor: Nombre y contacto del proveedor.</li>
+                <li class="list-group-item">Accesorio: Tipo, modelos compatibles y precio del accesorio.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

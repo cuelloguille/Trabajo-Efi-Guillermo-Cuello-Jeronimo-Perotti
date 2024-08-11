@@ -1,0 +1,25 @@
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+class Celular(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    equipo_nombre = db.Column(db.String(100), nullable=False)
+    equipo_categoria = db.Column(db.String(100), nullable=False)
+    equipo_modelo = db.Column(db.String(100), nullable=False)
+    equipo_costo = db.Column(db.Float, nullable=False)
+    marca = db.Column(db.String(100), nullable=False)
+    categoria_celular = db.Column(db.String(100), nullable=False)
+    modelo_celular = db.Column(db.String(100), nullable=False)
+    nombre_modelo_celular = db.Column(db.String(100), nullable=False)
+    fabricante_nombre = db.Column(db.String(100), nullable=False)
+    fabricante_pais = db.Column(db.String(100), nullable=False)
+    tipo_caracteristica = db.Column(db.String(100), nullable=False)
+    descripcion_caracteristica = db.Column(db.String(255), nullable=False)
+    cantidad_stock = db.Column(db.Integer, nullable=False)
+    ubicacion_almacen = db.Column(db.String(100), nullable=False)
+    nombre_proveedor = db.Column(db.String(100), nullable=False)
+    contacto_proveedor = db.Column(db.String(100), nullable=False)
+    tipo_accesorio = db.Column(db.String(100), nullable=False)
+    compatible_con_modelos = db.Column(db.String(100), nullable=False)
+    precio = db.Column(db.Float, nullable=False)

@@ -1,0 +1,117 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+    Agregar Celular
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Agregar Celular</h1>
+    <form method="POST" action="/crear_celular">
+        <!-- Equipo -->
+        <div class="form-group">
+            <label for="marca_celular">Equipo:</label>
+            <label for="equipo_nombre">Nombre del Equipo:</label>
+            <input type="text" class="form-control" id="equipo_nombre" name="equipo_nombre" placeholder="Ingrese el nombre del equipo" required>
+        
+            <label for="equipo_categoria">Categoría del Equipo:</label>
+            <input type="text" class="form-control" id="equipo_categoria" name="equipo_categoria" placeholder="Ingrese la categoría del equipo" required>
+        
+            <label for="equipo_modelo">Modelo del Equipo:</label>
+            <input type="text" class="form-control" id="equipo_modelo" name="equipo_modelo" placeholder="Ingrese el modelo del equipo" required>
+        
+            <label for="equipo_costo">Costo del Equipo:</label>
+            <input type="text" class="form-control" id="equipo_costo" name="equipo_costo" placeholder="Ingrese el costo del equipo" required>
+        </div>
+
+        <!-- Marca -->
+        <div class="form-group">
+            <label for="marca_celular">Marca:</label>
+           
+       
+        
+        
+            <div class="form-group">
+                <label for="categoria_celular">Categoría:</label>
+                <select class="form-control" id="categoria_celular" name="categoria_celular" required>
+                    <option value="" disabled selected>Seleccione una categoría</option>
+                    <option value="smartphone">Smartphone</option>
+                    <option value="feature_phone">Feature Phone</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="wearable">Wearable</option>
+                    <option value="other">Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Modelo -->
+        <div class="form-group">
+            <label for="modelo_celular">Modelo:</label>
+            <input type="text" class="form-control" id="modelo_celular" name="modelo_celular" placeholder="Ingrese el modelo del celular" required>
+        </div>
+
+        <!-- Nombre del Modelo -->
+        <div class="form-group">
+            <label for="nombre_modelo_celular">Nombre del Modelo:</label>
+            <input type="text" class="form-control" id="nombre_modelo_celular" name="nombre_modelo_celular" placeholder="Ingrese el nombre del modelo" required>
+        </div>
+
+        <!-- Fabricante -->
+        <div class="form-group">
+            <label for="fabricante_nombre">Nombre del Fabricante:</label>
+            <input type="text" class="form-control" id="fabricante_nombre" name="fabricante_nombre" placeholder="Ingrese el nombre del fabricante" required>
+        </div>
+        <div class="form-group">
+            <label for="fabricante_pais">País de Origen:</label>
+            <input type="text" class="form-control" id="fabricante_pais" name="fabricante_pais" placeholder="Ingrese el país de origen" required>
+        </div>
+
+        <!-- Característica -->
+        <div class="form-group">
+            <label for="tipo_caracteristica">Tipo de Característica:</label>
+            <input type="text" class="form-control" id="tipo_caracteristica" name="tipo_caracteristica" placeholder="Ingrese el tipo de característica (e.g., pantalla, batería)" required>
+        </div>
+        <div class="form-group">
+            <label for="descripcion_caracteristica">Descripción:</label>
+            <input type="text" class="form-control" id="descripcion_caracteristica" name="descripcion_caracteristica" placeholder="Ingrese la descripción" required>
+        </div>
+
+        <!-- Stock -->
+        <div class="form-group">
+            <label for="cantidad_stock">Cantidad Disponible:</label>
+            <input type="number" class="form-control" id="cantidad_stock" name="cantidad_stock" placeholder="Ingrese la cantidad disponible" required>
+        </div>
+        <div class="form-group">
+            <label for="ubicacion_almacen">Ubicación en el Almacén:</label>
+            <input type="text" class="form-control" id="ubicacion_almacen" name="ubicacion_almacen" placeholder="Ingrese la ubicación en el almacén" required>
+        </div>
+
+        <!-- Proveedor -->
+        <div class="form-group">
+            <label for="nombre_proveedor">Nombre del Proveedor:</label>
+            <input type="text" class="form-control" id="nombre_proveedor" name="nombre_proveedor" placeholder="Ingrese el nombre del proveedor" required>
+        </div>
+        <div class="form-group">
+            <label for="contacto_proveedor">Contacto del Proveedor:</label>
+            <input type="text" class="form-control" id="contacto_proveedor" name="contacto_proveedor" placeholder="Ingrese el contacto del proveedor" required>
+        </div>
+
+        <!-- Accesorio -->
+        <div class="form-group">
+            <label for="tipo_accesorio">Tipo de Accesorio:</label>
+            <input type="text" class="form-control" id="tipo_accesorio" name="tipo_accesorio" placeholder="Ingrese el tipo de accesorio (e.g., cargador, auriculares)" required>
+        </div>
+        <div class="form-group">
+            <label for="compatible_con_modelos">Compatible con Modelos:</label>
+            <input type="text" class="form-control" id="compatible_con_modelos" name="compatible_con_modelos" placeholder="Ingrese los modelos compatibles" required>
+        </div>
+         <!-- Precio -->
+         <div class="form-group">
+            <label for="precio">Precio de venta:</label>
+            <input type="text" class="form-control" id="precio" name="precio" placeholder="Ingresar precio al publico" required>
+            </div>
+
+        <button type="submit" class="btn btn-primary">Agregar Celular</button>
+    </form>
+</div>
+{% endblock %}
